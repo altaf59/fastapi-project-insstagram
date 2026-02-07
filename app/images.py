@@ -1,11 +1,11 @@
-from dotenv import load_dotenv
 from imagekitio import ImageKit
 import os
+from dotenv import load_dotenv
 
-load_dotenv()  # Load environment variables from .env file
+# .env file load karna (agar use kar rahe ho)
+load_dotenv()
 
-# Initialize ImageKit (SDK 5.x compatible)
+
 imagekit = ImageKit(
-    private_key=os.getenv("IMAGEKIT_PRIVATE_KEY"),
-    url_endpoint=os.getenv("IMAGEKIT_URL")
+    private_key=os.getenv("IMAGEKIT_PRIVATE_KEY")
 )

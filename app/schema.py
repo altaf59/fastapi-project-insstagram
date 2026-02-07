@@ -1,9 +1,13 @@
 from pydantic import BaseModel
 
-class Postcreat (BaseModel):
-    titel:str
-    content:str
+import uuid
+from fastapi_users import schemas
 
-class PostResponse(BaseModel):
-    title: str
-    content: str
+class UserRead(schemas.BaseUser[uuid.UUID]):
+    pass
+
+class UserCreate(schemas.BaseUserCreate):
+    pass
+
+class UserUpdate(schemas.BaseUserUpdate):
+    pass
